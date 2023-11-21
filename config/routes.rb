@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :gardens do
-    ressources :reservations
+    resources :reservations
   end
+  resources :reservations
 end
