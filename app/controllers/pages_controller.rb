@@ -28,5 +28,3 @@ class PagesController < ApplicationController
         params.require(:garden).permit(:name, :address, :detail, :tool, :picture, :price)
     end
 end
-
-
