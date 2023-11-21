@@ -1,7 +1,9 @@
 <% @pages.each do |garden| %>
     <%= link_to garden.name, garden_path(garden) %>
+    <%= garden.detail %>
+    <%= garden.price %>
 <% end %>
 
+
+
 <%= link_to "Create garden", new_garden_path %>
-
-
