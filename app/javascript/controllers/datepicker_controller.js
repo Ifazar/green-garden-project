@@ -5,15 +5,11 @@ import flatpickr from "flatpickr"; // You need to import this to use new flatpic
 // Connects to data-controller="datepicker"
 export default class extends Controller {
   connect() {
-    
-    flatpickr(this.element, { mode: "range" })
-=======
 
-import { Controller } from "@hotwired/stimulus"
-import flatpickr from "flatpickr"; // You need to import this to use new flatpickr()
-
-export default class extends Controller {
-  connect() {
-    flatpickr(this.element)
+    flatpickr(this.element, {
+      mode: "range",
+      minDate: "today",
+      dateFormat: "Y-m-d",
+    })
   }
 }

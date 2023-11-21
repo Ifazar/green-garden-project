@@ -3,20 +3,10 @@
 <div class="form-container">
   <%= simple_form_for [@garden, @reservation] do |t| %>
     <%= t.input :user, collection: User.all  %>
-    <%= t.input :date
-    {
-    mode: "range",
-    minDate: "today",
-    dateFormat: "Y-m-d",
-    disable: [
-        function(date) {
-            // disable every multiple of 8
-            return !(date.getDate() % 8);
-        }
-    ]
-    } %>
 
-
+    <%= t.input :date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
 
     <%= t.submit  %>
   <% end %>
