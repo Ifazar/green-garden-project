@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
     @user = User.find(params[:reservation][:user])
     @reservation = Reservation.new(user: @user, garden: @garden)
     if @reservation.save
-      redirect_to reservation_path(@reservation.show)
+      redirect_to garden_reservation_path(@garden, @reservation)
     else
       render :new, status: :unprocessable_entity
     end
