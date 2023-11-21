@@ -25,12 +25,12 @@ class GardensController < ApplicationController
   def update
     @garden.update(garden_params)
     @garden.save
-    redirect_to gardens_path
+    redirect_to pages_path
   end
 
   def destroy
     @garden.destroy
-    redirect_to gardens_path, status: :see_other
+    redirect_to pages_path
   end
 
   private
