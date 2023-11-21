@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
-  
+  def show
+
+  end
 
   def index
     @pages = Garden.all
