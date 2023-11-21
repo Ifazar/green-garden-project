@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
-  def home
-    
-  end
+  
 
   def index
     @pages = Garden.all
@@ -28,5 +26,3 @@ class PagesController < ApplicationController
         params.require(:garden).permit(:name, :address, :detail, :tool, :picture, :price)
     end
 end
-
-
