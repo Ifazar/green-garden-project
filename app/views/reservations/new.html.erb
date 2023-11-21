@@ -1,0 +1,7 @@
+<div class="form-container">
+  <%= simple_form_for [@garden, @reservation] do |t| %>
+    <%= t.input :user, collection: User.all  %>
+    
+    <%= t.submit  %>
+  <% end %>
+</div>
