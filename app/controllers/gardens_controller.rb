@@ -1,5 +1,5 @@
 class GardensController < ApplicationController
-  before_action :set_garden, only: %i[show]
+  before_action :set_garden, only: %i[show edit update destroy]
 
   def new
     @garden = Garden.new
@@ -19,15 +19,18 @@ class GardensController < ApplicationController
   end
 
   def edit
-
+    @garden.save
   end
 
   def update
-
+    @garden.update(garden_params)
+    @garden.save
+    redirect_to gardens_path
   end
 
   def destroy
-
+    @garden.destroy
+    redirect_to gardens_path, status: :see_other
   end
 
   private
@@ -37,6 +40,6 @@ class GardensController < ApplicationController
   end
 
   def set_garden
-    @garden = Garden.find(params[:garden_id])
+    @garden = Garden.find(params[:id])
   end
 end
