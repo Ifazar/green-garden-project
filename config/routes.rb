@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :gardens do
     resources :reservations
   end
+  resources :reservations
 end
