@@ -1,8 +1,7 @@
 <h2>Voulez-vous réserver ce lieu ?</h2>
-
+<p><%= @garden.name %></p>
 <div class="form-container">
   <%= simple_form_for [@garden, @reservation] do |t| %>
-    <%= t.input :user, collection: User.all  %>
 
     <%= t.input :date,
             as: :string,
