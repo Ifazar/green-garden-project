@@ -20,6 +20,9 @@
   <%= button_to "Delete", garden_path(@garden),method: :delete %>
 </div>
 
+<div>
+  <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden) %>
+</div>
 
 <div>
   <%= link_to "Return to all Garden",  pages_path %>

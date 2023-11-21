@@ -1,16 +1,16 @@
-<div>
+<div class="p-3">
   <%= simple_form_for [@garden] do |t| %>
-    <%= t.input :name %>
-    <%= t.input :address %>
-    <%= t.input :detail %>
-    <%= t.input :tool %>
-    <%= t.input :picture %>
-    <%= t.input :price %>
-    <%= t.input :date %>
+    <%= t.input :name, label: "Nom de la propriété" %>
+    <%= t.input :address, label: "Localisation" %>
+    <%= t.input :detail, label: "Détails du terrain" %>
+    <%= t.input :tool, label: "Outils mis à disposition" %>
+    <%= t.input :picture, as: :file, label: "Photos du terrain" %>
+    <%= t.input :price,label: "Prix" %>
+    
     <%= t.submit  %>
   <% end %>
 </div>
 
-<div>
+<div class="p-3">
   <%= link_to "Annuler",  pages_path %>
 </div>

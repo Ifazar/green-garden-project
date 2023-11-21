@@ -14,7 +14,7 @@ class ReservationsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   def show
     @reservation = Reservation.find(params[:id])
     @garden = Garden.new
