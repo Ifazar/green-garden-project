@@ -12,5 +12,15 @@
 
 
 <div>
+  <%= button_to "Edit", edit_garden_path,method: :get %>
+</div>
+
+
+<div>
+  <%= button_to "Delete", garden_path(@garden),method: :delete %>
+</div>
+
+
+<div>
   <%= link_to "Return to all Garden",  pages_path %>
 </div>
