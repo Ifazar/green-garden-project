@@ -6,9 +6,7 @@
     <%= t.input :tool, label: "Outils mis à disposition" %>
     <%= t.input :picture, as: :file, label: "Photos du terrain" %>
     <%= t.input :price,label: "Prix" %>
-    <%= t.input :date,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+    
     <%= t.submit  %>
   <% end %>
 </div>
