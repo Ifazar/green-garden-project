@@ -6,10 +6,10 @@ class ReservationsController < ApplicationController
 
   def create
     @garden = Garden.find(params[:garden_id])
-    @user = current_user
-
-    @reservation = Reservation.new(user: @user, garden: @garden)
-    if @reservation.save && @user != @garden.user
+    @reservation = Reservation.new(date: params[:reservation][:date])
+    @reservation.user = current_user
+    @reservation.garden = @garden
+    if @reservation.save
       redirect_to garden_reservation_path(@garden, @reservation)
     else
       render :new, status: :unprocessable_entity
@@ -20,5 +20,11 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @garden = Garden.new
   end
+
+  private
+
+    def reservation_params
+        params.require(:reservation).permit(:date)
+    end
 
 end
