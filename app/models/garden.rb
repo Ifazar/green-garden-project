@@ -1,6 +1,6 @@
 class Garden < ApplicationRecord
   has_many :reservations, dependent: :destroy
-  belongs_to :user
+  # belongs_to :user
 
   has_one_attached :image
 
