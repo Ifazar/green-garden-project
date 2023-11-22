@@ -1,6 +1,6 @@
-<h1>Garden</h1>
+<h1 class="text-center p-3">Garden</h1>
 
-<div>
+<div class= "container">
 
   <p><%= @garden.name %></p>
   <p><%= @garden.address %></p>
@@ -11,19 +11,19 @@
 </div>
 
 
-<div>
-  <%= button_to "Edit", edit_garden_path,method: :get %>
+<div class="p-2">
+  <%= button_to "Edit",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
 </div>
 
 
-<div>
-  <%= button_to "Delete", garden_path(@garden),method: :delete %>
+<div class="p-2">
+  <%= button_to "Delete", garden_path(@garden),method: :delete, class: "btn btn-outline-danger" %>
 </div>
 
-<div>
-  <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden) %>
+<div class="p-2">
+  <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden), class:"link text-decoration-none" %>
 </div>
 
-<div>
-  <%= link_to "Return to all Garden",  pages_path %>
+<div class="p-2">
+  <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
 </div>
