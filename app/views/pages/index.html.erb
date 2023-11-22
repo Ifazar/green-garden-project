@@ -1,13 +1,18 @@
-<% @pages.each do |garden| %>
 
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= link_to garden.name, garden_path(garden) %>
-      <%= garden.detail %>
-      <%= garden.price %>
+
+<div>
+  <% @pages.each do |garden| %>
+
+    <div class="cards">
+      <%= cl_image_tag garden.image.key, height: 30, width: 40, crop: :fill %>
+      <div class="card-category">
+        <%= link_to garden.name, garden_path(garden) %>
+        <%= garden.detail %>
+        <%= garden.price %>
+
+      </div>
     </div>
-  </div>
 
-<% end %>
 
-<%= link_to "Create garden", new_garden_path %>
+  <% end %>
+</div>
