@@ -1,4 +1,8 @@
-<h1><%= @reservation[@garden.name] %></h1>
+<h2>Votre réservation est transmis au propriétaire !</h2>
+
+<p><%= @garden.name %></p>
+
+<p><%= @reservation.date %></p>
 
 <img src="<%= @reservation["imageUrl"] %>" alt="reservation picture" class="reservation-image">
 
