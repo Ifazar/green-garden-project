@@ -6,7 +6,9 @@
   <p><%= @garden.address %></p>
   <p><%= @garden.detail %></p>
   <p><%= @garden.tool %></p>
-  <p><%= @garden.picture %></p>
+
+  <%= cl_image_tag @garden.image.key, height: 300, width: 400, crop: :fill if @garden.image.attached?%>
+
   <p><%= @garden.date %></p>
 </div>
 
