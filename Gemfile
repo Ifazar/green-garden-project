@@ -36,6 +36,8 @@ gem "stimulus-rails"
 gem "dotenv-rails"
 
 gem "cloudinary"
+gem 'activestorage-cloudinary-service'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

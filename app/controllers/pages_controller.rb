@@ -25,6 +25,6 @@ class PagesController < ApplicationController
 
 
     def garden_params
-        params.require(:garden).permit(:name, :address, :detail, :tool, :picture, :price)
+        params.require(:garden).permit(:name, :address, :detail, :tool, :image, :price)
     end
 end
