@@ -1,0 +1,19 @@
+.container {
+
+  width: 35%;
+  text-align: center;
+}
+
+p {
+  border-bottom: 2px dotted #eae2b7;
+  padding: 2px;
+
+}
+
+.link {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
