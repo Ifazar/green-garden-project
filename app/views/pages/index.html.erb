@@ -4,7 +4,7 @@
   <% @pages.each do |garden| %>
 
     <div class="cards">
-      <%= cl_image_tag garden.image.key, height: 30, width: 40, crop: :fill %>
+      <%= cl_image_tag garden.image.key, height: 150, width: 200, crop: :fill if garden.image.attached?%>
       <div class="card-category">
         <%= link_to garden.name, garden_path(garden) %>
         <%= garden.detail %>
@@ -18,4 +18,3 @@
 
   <% end %>
 </div>
-
