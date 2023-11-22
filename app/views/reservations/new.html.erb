@@ -3,6 +3,9 @@
 <div class="form-container">
   <%= simple_form_for [@garden, @reservation] do |t| %>
 
+
+
+
     <%= t.input :date,
             as: :string,
             input_html: { data: { controller: "datepicker" } } %>
