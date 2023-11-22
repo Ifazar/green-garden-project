@@ -1,7 +1,15 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+.card-category {
+  width: 400px;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+  background-size: cover;
+  position: relative;
+  background-position: center;
 }
 
 // Smallest device
