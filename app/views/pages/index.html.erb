@@ -1,5 +1,7 @@
 <% @pages.each do |garden| %>
 
+
+
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
       <%= link_to garden.name, garden_path(garden) %>
@@ -7,6 +9,7 @@
       <%= garden.price %>
     </div>
   </div>
+
 
 <% end %>
 
