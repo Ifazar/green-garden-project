@@ -1,8 +1,8 @@
 /* Styles pour la barre de navigation */
 .navbar-lewagon {
-  background-color: #dad7cd;
+  background-color: #d8f3dc;
   padding: 15px;
-  border-bottom: 2px solid #dad7cd;
+  border-bottom: 2px solid #d8f3dc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   /* Ombre légère */
 }
@@ -47,6 +47,7 @@
 .navbar-img {
   height: 75px;
   border-radius: 51% 49% 56% 44% / 29% 37% 63% 71%;
+  border: 2px solid black;
 }
 
 /* Styles pour supprimer la bordure arrondie */
@@ -56,7 +57,7 @@
 
 /* Styles pour le menu déroulant */
 .dropdown-menu {
-  background-color: #588157;
+  background-color: #2d6a4f;
   border: none;
   /* Suppression de la bordure du menu déroulant */
 }
@@ -70,7 +71,7 @@
 
 /* Styles au survol des éléments du menu déroulant */
 .dropdown-item:hover {
-  background-color: #a3b18a;
+  background-color: #40916c;
   /* Couleur de fond au survol du menu déroulant */
 }
 

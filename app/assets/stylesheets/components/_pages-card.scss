@@ -1,12 +1,11 @@
 
 
 .index-container {
- 
+
   display: flex;
   flex-flow: row wrap;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px;
   padding: 8px;
   justify-content: space-evenly;
   width: auto;
@@ -25,7 +24,7 @@
   width: auto;
   height: 50%;
   border-radius: 24px;
-
+  background-color: $grey-card ;
 }
 
 
