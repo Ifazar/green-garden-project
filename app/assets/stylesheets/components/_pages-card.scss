@@ -1,7 +1,7 @@
 
 
 .index-container {
- 
+
   display: flex;
   flex-flow: row wrap;
   flex-wrap: wrap;
@@ -9,10 +9,8 @@
   margin: 8px;
   padding: 8px;
   justify-content: space-evenly;
-  width: auto;
+  width: 60%;
 }
-
-
 
 
 .cards {
@@ -23,23 +21,23 @@
   text-align: center;
   border: solid black;
   width: auto;
-  height: 50%;
+  height: auto;
   border-radius: 24px;
-
+  // grid-template-columns: 1fr 1fr;
 }
 
+.map-container {
+  width: 60%;
+  height: 100vh;
+  position: sticky !important;;
+  top: 0 !important;;
+  margin: 16px;
+  border-radius: 24px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.index-pages-container {
+  display: flex;
+}
 
 
 
