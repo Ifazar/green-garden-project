@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :edit, :show]
   # Defines the root path route ("/")
   # root "articles#index"
   root to: 'pages#index'
@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   resources :gardens do
     resources :reservations
   end
-
+  
 end
