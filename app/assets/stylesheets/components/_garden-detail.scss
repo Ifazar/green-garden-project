@@ -1,11 +1,41 @@
-.container {
 
-  width: 35%;
+
+.container-detail {
+
+  width: 375px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  justify-content: center;
+  border-radius: 16px 4px 4px 16px;
 }
 
-p {
-  border-bottom: 2px dotted #eae2b7;
+.container-photo {
+  position: relative;
+  width: auto;
+  height: auto;
+
+}
+
+.container-garden {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.container-footer {
+  padding: 24px;
+}
+
+.modif-box {
+  display: flex;
+  justify-content: center;
+}
+
+.text-deco {
+  border-bottom: 2px solid #eae2b7;
+
   padding: 2px;
 
 }
