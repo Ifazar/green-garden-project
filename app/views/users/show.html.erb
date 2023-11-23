@@ -10,28 +10,44 @@
 </div>
 
 <div class="p-2">
-  <%= button_to "Modifier vos données",  edit_user_path,method: :get, class: "btn btn-outline-info" %>
+  <%= button_to "Modifier vos données",  edit_user_path(@user),method: :get, class: "btn btn-outline-info" %>
 </div>
 
 
 
 <div class= "container">
   <h3>Vos Gardens:</h3>
-  <p><%= @user.garden.name %></p>
-  <p><%= @user.garden.address %></p>
-  <p><%= @user.garden.detail %></p>
-  <p><%= @user.garden.tool %></p>
-
-  <%= cl_image_tag @user.garden.image.key, height: 300, width: 400, crop: :fill if @user.garden.image.attached?%>
-
+  <% @gardens.each do |garden| %>
+  <ul>
+      <li>
+        <%= garden.name %> <br>
+        <%= garden.address %>
+        <%= garden.detail %>
+        <%= garden.price %>
+        <%= cl_image_tag garden.image.key, height: 300, width: 400, crop: :fill if garden.image.attached?%>
+        <div class="p-2">
+          <%= button_to "Modifier votre Garden",  edit_garden_path(garden),method: :get, class: "btn btn-outline-info" %>
+        </div>
+        <div class="p-2">
+          <%= button_to "Delete votre Garden", garden_path(garden),method: :delete, class: "btn btn-outline-danger" %>
+        </div>
+        <p>Vos réservations pour ce Garden:</p>
+          <ul>
+            <% @reservations.select { |reservation| reservation.garden_id == garden.id }.each do |reservation| %>
+              <li>
+                <%= reservation.date %> <br>
+                <p> Voulez vous confirmer cette réservation ? </p>
+                <div class="p-2">
+                  <%= button_to "Confirmer réservation", class: "btn btn-outline-success" %>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+      </li>
+    </ul>
+  <% end %>
 </div>
 
-
 <div class="p-2">
-  <%= button_to "Modifier votre Garden",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
-</div>
-
-
-<div class="p-2">
-  <%= button_to "Delete votre Garden", garden_path(@user.garden),method: :delete, class: "btn btn-outline-danger" %>
+  <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
 </div>

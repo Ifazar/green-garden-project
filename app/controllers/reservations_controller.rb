@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
   def create
     @garden = Garden.find(params[:garden_id])
     @reservation = Reservation.new(date: params[:reservation][:date])
-    @reservation.user = current_user 
+    @reservation.user = current_user if current_user != @garden.user
     @reservation.garden = @garden
     if @reservation.save
       redirect_to garden_reservation_path(@garden, @reservation)

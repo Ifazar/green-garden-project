@@ -6,7 +6,8 @@ class GardensController < ApplicationController
   end
 
   def show
-
+    @user = current_user
+    @garden = Garden.find(params[:id])
   end
 
   def create
