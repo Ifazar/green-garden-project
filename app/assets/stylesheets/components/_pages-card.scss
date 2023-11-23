@@ -6,7 +6,6 @@
   flex-flow: row wrap;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px;
   padding: 8px;
   justify-content: space-evenly;
   width: 60%;
@@ -23,7 +22,10 @@
   width: auto;
   height: auto;
   border-radius: 24px;
-  // grid-template-columns: 1fr 1fr;
+
+  background-color: $grey-card ;
+
+  
 }
 
 .map-container {
