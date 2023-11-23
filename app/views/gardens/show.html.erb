@@ -1,30 +1,42 @@
-<h1 class="text-center p-3">Garden</h1>
+<h1 class="text-center p-3"><%= @garden.name %></h1>
 
-<div class= "container">
+<div class="container-garden">
+  <div class= "container-detail">
 
-  <p><%= @garden.name %></p>
-  <p><%= @garden.address %></p>
-  <p><%= @garden.detail %></p>
-  <p><%= @garden.tool %></p>
 
-  <%= cl_image_tag @garden.image.key, height: 300, width: 400, crop: :fill if @garden.image.attached?%>
+    <p class="text-deco"><%= @garden.address %></p>
+    <p class="text-deco"><%= @garden.detail %></p>
+    <p class="text-deco"><%= @garden.tool %></p>
+    <p class="text-deco"><%= @garden.price %>€/mois</p>
+
+  </div>
+
+  <div class="container-photo">
+    <%= cl_image_tag @garden.image.key, class: "rounded-end-4 rounded-start-3", height: 300, width: 400, crop: :fill if @garden.image.attached?%>
+  </div>
 
 </div>
 
 
-<div class="p-2">
-  <%= button_to "Edit",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
-</div>
+
+<div class="container-footer">
+  <div class="modif-box">
+    <div class="p-2 text-center">
+      <%= button_to "Edit",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
+    </div>
 
 
-<div class="p-2">
-  <%= button_to "Delete", garden_path(@garden),method: :delete, class: "btn btn-outline-danger" %>
-</div>
+    <div class="p-2 text-center">
+      <%= button_to "Delete", garden_path(@garden),method: :delete, class: "btn btn-outline-success" %>
+    </div>
+  </div>
 
-<div class="p-2">
-  <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden), class:"link text-decoration-none" %>
-</div>
 
-<div class="p-2">
-  <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
+  <div class="p-2 text-center">
+    <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden), class:"link text-decoration-none" %>
+  </div>
+
+  <div class="p-2 text-center">
+    <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
+  </div>
 </div>
