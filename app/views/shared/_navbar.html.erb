@@ -1,8 +1,9 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
 
     <%= link_to pages_path  do %>
-   <%= image_tag "logo-sh.png", width: 150, height: 150, style: "border-radius: 10px;" %>
+  <%= image_tag "logo-sh.png", class: "navbar-img", alt: "logo"  %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +24,7 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            <%= image_tag "user-regular.svg", class: "avatar no-border-radius", alt: "dropdown menu", width: 40, height: 40 %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
@@ -40,3 +41,4 @@
     </div>
   </div>
 </div>
+
