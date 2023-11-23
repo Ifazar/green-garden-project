@@ -1,71 +1,82 @@
+/* Styles pour la barre de navigation */
 .navbar-lewagon {
-  background-color: #2ecc71;
+  background-color: #dad7cd;
   padding: 15px;
-  border-bottom: 2px solid #27ae60;
+  border-bottom: 2px solid #dad7cd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
 }
 
+/* Styles pour la partie collapsible de la navbar (lorsqu'elle est réduite) */
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
   display: flex;
   align-items: center;
   color: #fff !important;
+  /* Couleur du texte des liens */
   font-weight: bold;
   transition: color 0.3s ease;
+  /* Transition en douceur lors du survol */
   margin-right: 20px;
+  /* Marge à droite pour les éléments de la navbar */
 }
 
-
+/* Styles pour les liens dans la navbar */
 .nav-link:hover {
-  color: #c0392b !important;
+  color: #588157 !important;
+  /* Couleur du texte au survol */
 }
 
+/* Styles pour les icônes du bouton de bascule (hamburger) et de l'avatar */
+.navbar-toggler-icon,
 .avatar {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
+  width: 35px;
+  height: 35px;
+  font-family: 'Font Awesome 5 Free';
+  /* Utilisation de la police Font Awesome */
 }
 
+/* Styles supplémentaires pour la navbar */
+.navbar {
+  height: 80px;
+  padding: 10px;
+  /* Espace intérieur de la navbar */
+}
+
+/* Styles pour l'image du logo */
+.navbar-img {
+  height: 75px;
+  border-radius: 51% 49% 56% 44% / 29% 37% 63% 71%;
+}
+
+/* Styles pour supprimer la bordure arrondie */
+.no-border-radius {
+  border-radius: 0 !important;
+}
+
+/* Styles pour le menu déroulant */
 .dropdown-menu {
-  background-color: black;
-  /* Couleur de fond du menu déroulant */
+  background-color: #588157;
   border: none;
+  /* Suppression de la bordure du menu déroulant */
 }
 
+/* Styles pour les éléments du menu déroulant */
 .dropdown-item {
   color: #fff !important;
   transition: background-color 0.3s ease;
-  /* Transition en douceur */
+  /* Transition en douceur au survol */
 }
 
+/* Styles au survol des éléments du menu déroulant */
 .dropdown-item:hover {
-  background-color: #27ae60;
+  background-color: #a3b18a;
   /* Couleur de fond au survol du menu déroulant */
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+/* Styles pour les éléments de la navbar */
+.nav-item {
+  margin-right: 20px;
+  align-items: center;
+  /* Alignement vertical des éléments */
 }
-
-
-
-// .navbar-nav {
-//   list-style: none;
-//   display: flex;
-// }
-
-// .nav-item{
-//   display: inline;
-//   margin-right: 20px;
-// }
-
-// .navbar a {
-//   text-decoration: none;
-//   color: black;
-//   transition: color 0.3 ease;
-// }
-
-// .navbar a:hover {
-//   color: blue;
-// }
