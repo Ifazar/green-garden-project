@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = current_user
     @gardens = Garden.where(user: current_user)
     @reservations = Reservation.where(garden_id: @gardens.pluck(:id))
+    @resers = Reservation.where(user: current_user)
   end
 
   def create

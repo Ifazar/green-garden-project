@@ -6,14 +6,24 @@
   <p><%= @user.last_name %></p>
   <p><%= @user.address %></p>
   <p><%= @user.phone_number %></p>
-
+  <div class="p-2">
+    <%= button_to "Modifier vos données",  edit_user_path(@user),method: :get, class: "btn btn-outline-info" %>
+  </div>
 </div>
 
-<div class="p-2">
-  <%= button_to "Modifier vos données",  edit_user_path(@user),method: :get, class: "btn btn-outline-info" %>
+<div class= "container">
+<h3>Vos demandes de réservations:</h3>
+  <% @resers.each do |reservation| %>
+    <ul>
+      <li>
+        <%= reservation.garden.name %> <br>
+        <%= reservation.date %>
+        <p>Status:</p>
+        <%= reservation.status %>
+      </li>
+    </ul>
+  <% end %>
 </div>
-
-
 
 <div class= "container">
   <h3>Vos Gardens:</h3>
@@ -38,7 +48,7 @@
                 <%= reservation.date %> <br>
                 <p> Voulez vous confirmer cette réservation ? </p>
                 <div class="p-2">
-                  <%= button_to "Confirmer réservation", class: "btn btn-outline-success" %>
+                  <%= button_to 'Valider la Réservation', validate_garden_reservation_path(reservation), method: :patch, class: 'btn btn-success' %>
                 </div>
               </li>
             <% end %>
