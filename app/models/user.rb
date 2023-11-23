@@ -11,8 +11,8 @@ class User < ApplicationRecord
 
   has_many :gardens
   has_many :reservations, through: :gardens
-  
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
 
 end
