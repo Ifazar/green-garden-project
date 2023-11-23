@@ -7,7 +7,17 @@ class PagesController < ApplicationController
 
   def index
     @pages = Garden.all
+
+
+    @map_garden = @pages.geocoded.map do |garden|
+      {
+        lat: garden.latitude,
+        lng: garden.longitude
+      }
+    end
   end
+
+
 
   def new
     @page = Garden.new

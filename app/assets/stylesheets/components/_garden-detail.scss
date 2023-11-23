@@ -2,13 +2,15 @@
 
 .container-detail {
 
-  width: 375px;
+  width: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-  border: 3px solid;
+  border: 0.1rem solid;
   justify-content: center;
-  border-radius: 16px 4px 4px 16px;
+  border-radius: 16px 16px 4px 4px;
+  padding: 16px;
+  height: 50%;
 }
 
 .container-photo {
@@ -20,12 +22,17 @@
 
 .container-garden {
   display: flex;
-  gap: 100px;
+  flex-direction: column;
+  gap: 32px;
   justify-content: center;
 }
 
 .container-footer {
-  padding: 24px;
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid black;
+
+  justify-content: center;
 }
 
 .modif-box {
@@ -46,4 +53,19 @@
   &:hover {
     opacity: 1;
   }
+}
+
+
+.map-garden {
+  width: 700px;
+  height: 600px;
+  // position: sticky !important;;
+  // top: 0 !important;;
+  margin: 16px;
+  border-radius: 24px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
 }
