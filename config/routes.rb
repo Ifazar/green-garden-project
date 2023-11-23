@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   resources :pages
 
   resources :gardens do
-    resources :reservations
+    resources :reservations do
+      member do
+        patch 'validate'
+      end
+    end
   end
-  
+
 end
