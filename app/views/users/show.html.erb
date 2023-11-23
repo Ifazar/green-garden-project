@@ -1,0 +1,37 @@
+<h2>Bienvenu sur votre page de profil</h2>
+
+<div class= "container">
+  <h3>Vos données personnels:</h3>
+  <p><%= @user.first_name %></p>
+  <p><%= @user.last_name %></p>
+  <p><%= @user.address %></p>
+  <p><%= @user.phone_number %></p>
+
+</div>
+
+<div class="p-2">
+  <%= button_to "Modifier vos données",  edit_user_path,method: :get, class: "btn btn-outline-info" %>
+</div>
+
+
+
+<div class= "container">
+  <h3>Vos Gardens:</h3>
+  <p><%= @user.garden.name %></p>
+  <p><%= @user.garden.address %></p>
+  <p><%= @user.garden.detail %></p>
+  <p><%= @user.garden.tool %></p>
+
+  <%= cl_image_tag @user.garden.image.key, height: 300, width: 400, crop: :fill if @user.garden.image.attached?%>
+
+</div>
+
+
+<div class="p-2">
+  <%= button_to "Modifier votre Garden",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
+</div>
+
+
+<div class="p-2">
+  <%= button_to "Delete votre Garden", garden_path(@user.garden),method: :delete, class: "btn btn-outline-danger" %>
+</div>
