@@ -15,11 +15,18 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+
   </head>
 
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <%= yield %>
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
   </body>
 </html>

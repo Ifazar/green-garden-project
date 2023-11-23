@@ -14,3 +14,5 @@ pin "@popperjs/core", to: "https://unpkg.com/@popperjs/core@2.11.2/dist/esm/inde
 
 pin "flatpickr", to: "https://ga.jspm.io/npm:flatpickr@4.6.13/dist/esm/index.js"
 
+pin "mapbox-gl", to: "https://ga.jspm.io/npm:mapbox-gl@2.15.0/dist/mapbox-gl.js"
+pin "process", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process-production.js"

@@ -33,8 +33,10 @@ gem "stimulus-rails"
 
 # gem "jbuilder"
 
+gem "geocoder"
 
 gem "cloudinary"
+
 gem 'activestorage-cloudinary-service'
 
 

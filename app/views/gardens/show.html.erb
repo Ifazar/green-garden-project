@@ -1,19 +1,31 @@
 <h1 class="text-center p-3"><%= @garden.name %></h1>
 
-<div class="container-garden">
-  <div class= "container-detail">
+<div class="main-container">
+
+  <div class="container-garden">
+    <div class= "container-detail shadow">
 
 
-    <p class="text-deco"><%= @garden.address %></p>
-    <p class="text-deco"><%= @garden.detail %></p>
-    <p class="text-deco"><%= @garden.tool %></p>
-    <p class="text-deco"><%= @garden.price %>€/mois</p>
+      <p class="text-deco"><%= @garden.address %></p>
+      <p class="text-deco"><%= @garden.detail %></p>
+      <p class="text-deco"><%= @garden.tool %></p>
+      <p class="text-deco"><%= @garden.price %>€/mois</p>
 
+    </div>
+
+    <div class="container-photo ">
+      <%= cl_image_tag @garden.image.key, class: "rounded-bottom-4 rounded-top-3 shadow", height: 300, width: 400, crop: :fill if @garden.image.attached?%>
+    </div>
   </div>
 
-  <div class="container-photo">
-    <%= cl_image_tag @garden.image.key, class: "rounded-end-4 rounded-start-3", height: 300, width: 400, crop: :fill if @garden.image.attached?%>
+  <div
+        class="map-garden"
+
+        data-controller="map"
+        data-map-garden-value="<%= @map_garden.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
 
 </div>
 
