@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReservationsController < ApplicationController
   def new
     @garden = Garden.find(params[:garden_id])
@@ -37,5 +39,4 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:date)
   end
-
 end
