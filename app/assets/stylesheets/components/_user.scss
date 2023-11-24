@@ -1,0 +1,76 @@
+
+.perso-gar-container {
+
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+.card {
+  border: 1px solid;
+  margin: 8px;
+  width: 55%;
+  border-radius: 8px 0px 0px 42px;
+}
+
+.card-resa {
+  border: 1px solid;
+  padding: 8px;
+  margin: 8px;
+  width: 400px;
+  height: auto;
+  border-radius: 0px 42px 8px 0px;
+}
+
+.union-card {
+
+  display: flex;
+  width: 50%;
+
+}
+
+
+
+
+.info-perso-container {
+  border: 1px solid;
+  width:500px;
+  height: 200px;
+  padding: 8px;
+}
+
+
+.dem-resa-container {
+  border: 1px solid;
+  width: 500px;
+  height: 200px;
+  padding: 8px;
+}
+
+
+
+// .resa-card {
+//   border: 1px solid;
+//   width: 700px;
+//   height: 500px;
+//   display: flex;
+
+
+// }
+
+// .resa-card-detail {
+//   border: 1px solid;
+//   width: 300px;
+//   height: 250px;
+//   display: flex;
+//   flex-direction:column;
+// }
+
+// .resa-card-modif {
+//   width: 300px;
+//   height: auto;
+//   border: 1px solid;
+//   display: flex;
+//   flex-direction: column;
+// }

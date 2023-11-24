@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReservationsController < ApplicationController
   def new
     @garden = Garden.find(params[:garden_id])
@@ -49,6 +51,7 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(:date)
   end
 
+
   def check
     @start_date = Date.parse(@reservation.date.split(' to ')[0])
     @end_date = Date.parse(@reservation.date.split(' to ')[1])
@@ -74,5 +77,6 @@ class ReservationsController < ApplicationController
       end
     end
   end
+
 
 end

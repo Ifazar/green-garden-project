@@ -1,16 +1,62 @@
-<div class="p-3">
-  <%= simple_form_for [@garden] do |t| %>
-    <%= t.input :name, label: "Nom de la propriété" %>
-    <%= t.input :address, label: "Localisation" %>
-    <%= t.input :detail, label: "Détails du terrain" %>
-    <%= t.input :tool, label: "Outils mis à disposition" %>
-    <%= t.input :image, as: :file, label: "Photos du terrain" %>
-    <%= t.input :price,label: "Prix" %>
+<style>
+ .custom-form {
+    max-width: 400px;
+    margin-left: 440px;
+    margin-top: 40px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    <%= t.submit  %>
-  <% end %>
+  .custom-form input {
+    width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+  .custom-form button {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .custom-form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .text{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+  }
+
+
+</style>
+
+
+<div class="body-color">
+  <div class="custom-form card-color">
+  <h1>Ajoutez votre jardin</h1>
+
+    <%= simple_form_for [@garden] do |t| %>
+      <%= t.input :name, label: "Nom de la propriété" %>
+      <%= t.input :address, label: "Localisation" %>
+      <%= t.input :detail, label: "Détails du terrain" %>
+      <%= t.input :tool, label: "Outils mis à disposition" %>
+      <%= t.input :image, as: :file, label: "Photos du terrain" %>
+      <%= t.input :price, label: "Prix" %>
+
+      <%= t.submit %>
+    <% end %>
+  </div>
 </div>
 
-<div class="p-3">
-  <%= link_to "Annuler",  pages_path %>
+
+<div class="p-3 body-color custom-form text card-color">
+  <%= link_to "Annuler", pages_path %>
 </div>
