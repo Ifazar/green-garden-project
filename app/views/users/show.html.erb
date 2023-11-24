@@ -40,8 +40,8 @@
 
     <div class="union-card">
 
-      <div class="card card-color">
-      <%= cl_image_tag garden.image.key, class: "p-1 rounded-4 img-fluid", crop: :fill if garden.image.attached? %>
+      <div class="card ">
+        <%= cl_image_tag garden.image.key, class: "p-1 rounded-4 img-fluid", crop: :fill if garden.image.attached? %>
         <div class="card-body">
           <h5 class="card-title"><%= link_to garden.name, garden_path(garden), class:"cutlink" %></h5>
           <p class="card-text">
@@ -51,7 +51,7 @@
           </p>
         </div>
 
-        <div class="card-footer card-color">
+        <div class="card-footer ">
           <div class="p-2">
             <%= button_to "Modifier votre Garden",  edit_garden_path(garden),method: :get, class: "btn btn-outline-info rounded-4" %>
           </div>
@@ -62,7 +62,7 @@
 
       </div>
 
-      <div class="card-resa overflow-y-auto card-color">
+      <div class="card-resa overflow-y-auto ">
         <p>Vos réservations:</p>
         <ul>
           <% @reservations.select { |reservation| reservation.garden_id == garden.id }.each do |reservation| %>
@@ -90,7 +90,7 @@
 
 
 
-<div class="p-2">
+<div class="p-2 container-footer card-color text-center">
 
   <%= link_to "HOME PAGE",  pages_path, class:"cutlink" %>
 
