@@ -10,6 +10,14 @@ class GardensController < ApplicationController
   def show
     @user = current_user
     @garden = Garden.find(params[:id])
+
+    @map_garden = [@garden].map do |garden|
+      {
+        lat: garden.latitude,
+        lng: garden.longitude,
+        
+      }
+    end
   end
 
   def create

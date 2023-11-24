@@ -22,7 +22,7 @@
         class="map-garden"
 
         data-controller="map"
-        data-map-garden-value="<%= @map_garden.to_json %>"
+        data-map-gardens-value="<%= @map_garden.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
@@ -49,7 +49,7 @@
       <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden), class:"link text-decoration-none" %>
     </div>
   <% end %>
-  
+
   <div class="p-2 text-center">
     <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
   </div>

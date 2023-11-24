@@ -1,11 +1,12 @@
 <style>
  .custom-form {
-    max-width: 400px;
-    margin-left: 440px;
+    max-width: 600px;
+    /* margin-left: 440px; */
+
     margin-top: 40px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 10px;
+    padding: 32px;
     font-family: 'Roboto', sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -35,12 +36,19 @@
     margin-bottom: 20px;
   }
 
+  .body-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
 
 </style>
 
 
-<div class="body-color">
-  <div class="custom-form card-color">
+<div class="body-form">
+  <div class="custom-form card-color ">
   <h1>Ajoutez votre jardin</h1>
 
     <%= simple_form_for [@garden] do |t| %>
@@ -54,9 +62,11 @@
       <%= t.submit %>
     <% end %>
   </div>
-</div>
 
 
-<div class="p-3 body-color custom-form text card-color">
-  <%= link_to "Annuler", pages_path %>
+
+  <div class="p-3 body-color custom-form text card-color">
+    <%= link_to "Annuler", pages_path %>
+  </div>
+
 </div>
