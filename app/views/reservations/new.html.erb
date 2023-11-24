@@ -1,6 +1,46 @@
+<style>
+
+.form-container {
+    max-width: 400px;
+    margin-left: 440px;
+    margin-top: 40px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container input {
+    width: 100%;
+    margin-bottom: 50px;
+
+  }
+
+  .form-container button {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+ .form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .text{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+  }
+</style>
+
+
+<div class="form-container card-color">
 <h2>Voulez-vous réserver ce lieu ?</h2>
-<p><%= @garden.name %></p>
-<div class="form-container">
+<p><%= @garden.name %></p> <br>
   <%= simple_form_for [@garden, @reservation] do |t| %>
 
     <%= t.input :date,
@@ -10,6 +50,6 @@
     <%= t.submit  %>
   <% end %>
 </div>
-<div>
+<div class="form-container text card-color">
   <%= link_to "Return to all Garden",  pages_path %>
 </div>
