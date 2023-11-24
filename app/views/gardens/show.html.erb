@@ -31,8 +31,10 @@
 
 
 
-<div class="container-footer">
-  <% if current_user == @garden.user %>
+
+<div class="container-footer card-color">
+  <<% if current_user == @garden.user %>>
+
     <div class="modif-box">
       <div class="p-2 text-center">
         <%= button_to "Edit",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
