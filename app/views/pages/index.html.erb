@@ -10,7 +10,7 @@
 
 
       <%= cl_image_tag garden.image.key, class:"rounded-4", height: 150, width: 200, crop: :fill if garden.image.attached?%>
-      <h4><%= link_to garden.name, garden_path(garden) %></h4>
+      <h4><%= link_to garden.name, garden_path(garden), class:"cutlink" %></h4>
       <p><%= garden.detail %></p>
       <p><%= garden.price %>€/month</p>
     </div>
