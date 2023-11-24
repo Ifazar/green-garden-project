@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddUserReferences < ActiveRecord::Migration[7.0]
   def change
     add_reference :gardens, :user, index: true

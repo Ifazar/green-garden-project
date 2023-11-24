@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GardensController < ApplicationController
   before_action :set_garden, only: %i[show edit update destroy]
 

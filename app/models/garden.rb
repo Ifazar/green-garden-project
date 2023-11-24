@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Garden < ApplicationRecord
   has_many :reservations, dependent: :destroy
   belongs_to :user
