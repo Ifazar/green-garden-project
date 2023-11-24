@@ -41,7 +41,7 @@
     <div class="union-card">
 
       <div class="card card-color">
-      <%= cl_image_tag garden.image.key, class: "p-1 rounded-4 ms-4 img-fluid", crop: :fill if garden.image.attached? %>
+      <%= cl_image_tag garden.image.key, class: "p-1 rounded-4 img-fluid", crop: :fill if garden.image.attached? %>
         <div class="card-body">
           <h5 class="card-title"><%= link_to garden.name, garden_path(garden), class:"cutlink" %></h5>
           <p class="card-text">
