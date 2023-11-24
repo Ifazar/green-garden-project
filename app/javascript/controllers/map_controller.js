@@ -18,13 +18,16 @@ export default class extends Controller {
     })
 
     this.#addGardensToMap()
+    this.#fitMapToGardens()
 
   }
 
   #addGardensToMap() {
     this.gardensValue.forEach((garden) => {
-      new mapboxgl.Garden()
+      // const popup = new mapboxgl.Popup().setHTML(marker.info_window_html)
+      new mapboxgl.Marker()
         .setLngLat([ garden.lng, garden.lat ])
+        // .setPopup(popup)
         .addTo(this.map)
     })
   }

@@ -12,14 +12,23 @@
 @import "pages/index";
 
 .body-color{
-    background-color: $green-body;
-    // height: 105vh;
+  background-color: $green-body;
+  // height: 105vh;
 }
 
 .card-color{
-    background-color: $grey-card;
+  background-color: $grey-card;
 }
 
 .text-color{
-    color: $color-text;
+  color: $color-text;
+}
+
+.cutlink {
+  text-decoration: none;
+  color: black;
+}
+.cutlink:hover {
+  transition: 0.6s ease;
+  color: #588157 !important;
 }
