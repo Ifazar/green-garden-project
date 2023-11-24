@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_many :reservations, through: :gardens
 
 
-  validates :email, presence: true, uniqueness: true
-  validates :first_name, presence: true
+  # validates :email, presence: true, uniqueness: true
+  # validates :first_name, presence: true
   # validates :address, presence: true
   # validates :phone_number, presence: true
 
