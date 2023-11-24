@@ -11,7 +11,8 @@ class PagesController < ApplicationController
     @map_garden = @pages.geocoded.map do |garden|
       {
         lat: garden.latitude,
-        lng: garden.longitude
+        lng: garden.longitude,
+        
       }
     end
   end

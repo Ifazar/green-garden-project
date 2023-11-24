@@ -8,7 +8,7 @@
     <p><%= @user.address %></p>
     <p><%= @user.phone_number %></p>
     <div class="p-2">
-      <%= button_to "Modifier vos données",  edit_user_path(@user),method: :get, class: "btn btn-outline-info" %>
+      <%= button_to "Modifier vos données",  edit_user_path(@user),method: :get, class: "btn btn-outline-primary" %>
     </div>
   </div>
 
@@ -53,10 +53,10 @@
 
         <div class="card-footer">
           <div class="p-2">
-            <%= button_to "Modifier votre Garden",  edit_garden_path(garden),method: :get, class: "btn btn-outline-info" %>
+            <%= button_to "Modifier votre Garden",  edit_garden_path(garden),method: :get, class: "btn btn-outline-info rounded-4" %>
           </div>
           <div class="p-2">
-            <%= button_to "Delete votre Garden", garden_path(garden),method: :delete, class: "btn btn-outline-danger" %>
+            <%= button_to "Delete votre Garden", garden_path(garden),method: :delete, class: "btn btn-outline-success " %>
           </div>
         </div>
 
@@ -91,5 +91,7 @@
 
 
 <div class="p-2">
+
   <%= link_to "Return to all Garden",  pages_path, class:"cutlink" %>
+
 </div>
