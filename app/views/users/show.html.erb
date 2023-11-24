@@ -1,7 +1,7 @@
 <h2 class="d-flex justify-content-center">Bienvenu sur votre page de profil</h2>
 
-<div class="d-flex justify-content-center grid gap-5">
-  <div class= "info-perso-container overflow-y-auto">
+<div class="d-flex justify-content-center grid gap-5 ">
+  <div class= "info-perso-container overflow-y-auto card-color">
     <h3>Vos données personnels:</h3>
     <p><%= @user.first_name %></p>
     <p><%= @user.last_name %></p>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class= "dem-resa-container overflow-y-auto">
+  <div class= "dem-resa-container overflow-y-auto card-color">
   <h3>Vos demandes de réservations:</h3>
     <% @resers.each do |reservation| %>
       <ul>
@@ -40,8 +40,8 @@
 
     <div class="union-card">
 
-      <div class="card">
-        <%= cl_image_tag garden.image.key, height: 200, width: 300, class:"p-1 rounded-4 ms-4", crop: :fill if garden.image.attached?%>
+      <div class="card card-color">
+      <%= cl_image_tag garden.image.key, class: "p-1 rounded-4 ms-4 img-fluid", crop: :fill if garden.image.attached? %>
         <div class="card-body">
           <h5 class="card-title"><%= garden.name %></h5>
           <p class="card-text">
@@ -51,7 +51,7 @@
           </p>
         </div>
 
-        <div class="card-footer">
+        <div class="card-footer card-color">
           <div class="p-2">
             <%= button_to "Modifier votre Garden",  edit_garden_path(garden),method: :get, class: "btn btn-outline-info" %>
           </div>
@@ -62,7 +62,7 @@
 
       </div>
 
-      <div class="card-resa overflow-y-auto">
+      <div class="card-resa overflow-y-auto card-color">
         <p>Vos réservations:</p>
         <ul>
           <% @reservations.select { |reservation| reservation.garden_id == garden.id }.each do |reservation| %>
@@ -71,7 +71,7 @@
               <%= reservation.date %> <br>
               <p> Confirmer ? </p>
               <div class="p-2">
-                  <%= button_to 'Valider la Réservation', validate_garden_reservation_path(reservation), method: :patch, class: 'btn btn-success' %>
+                  <%= button_to 'Valider la Réservation', confirme_garden_reservation_path(reservation), method: :patch, class: 'btn btn-success' %>
                 </div>
               <div class="p-2">
                     <%= button_to 'Refuser la Réservation', refuse_garden_reservation_path(reservation, garden), method: :patch, class: 'btn btn-danger' %>
