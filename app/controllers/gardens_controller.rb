@@ -34,7 +34,7 @@ class GardensController < ApplicationController
 
   def destroy
     @garden.destroy
-    redirect_to pages_path
+    redirect_to user_path
   end
 
   private

@@ -21,10 +21,16 @@
           <%= reservation.date %>
           <p>Status:</p>
           <%= reservation.status %>
+           <% if reservation.status == 'Réservation refusée' %>
+          <div class="p-2 text-center">
+            <%= button_to "Delete", garden_reservation_path(reservation),method: :delete, class: "btn btn-outline-success" %>
+          </div>
+        <% end %>
         </li>
       </ul>
     <% end %>
   </div>
+
 </div>
 
 <h3 class="ms-5">Vos Gardens:</h3>
@@ -53,23 +59,30 @@
             <%= button_to "Delete votre Garden", garden_path(garden),method: :delete, class: "btn btn-outline-danger" %>
           </div>
         </div>
+
       </div>
 
       <div class="card-resa overflow-y-auto">
         <p>Vos réservations:</p>
         <ul>
           <% @reservations.select { |reservation| reservation.garden_id == garden.id }.each do |reservation| %>
+          <% if reservation.status == 'En attente de validation' %>
             <li>
               <%= reservation.date %> <br>
               <p> Confirmer ? </p>
               <div class="p-2">
                   <%= button_to 'Valider la Réservation', validate_garden_reservation_path(reservation), method: :patch, class: 'btn btn-success' %>
                 </div>
+              <div class="p-2">
+                    <%= button_to 'Refuser la Réservation', refuse_garden_reservation_path(reservation, garden), method: :patch, class: 'btn btn-danger' %>
+                  </div>
             </li>
+          <% end %>
           <% end %>
         </ul>
       </div>
     </div>
+
 
   <% end %>
 
