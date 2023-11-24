@@ -32,7 +32,7 @@
 
 
 <div class="container-footer">
-  <<% if current_user == @garden.user %>>
+  <% if current_user == @garden.user %>
     <div class="modif-box">
       <div class="p-2 text-center">
         <%= button_to "Edit",  edit_garden_path,method: :get, class: "btn btn-outline-info" %>
@@ -49,8 +49,8 @@
       <%= link_to "Réserver ce Garden",  new_garden_reservation_path(@garden), class:"link text-decoration-none" %>
     </div>
   <% end %>
-  
+
   <div class="p-2 text-center">
-    <%= link_to "Return to all Garden",  pages_path, class:"link text-decoration-none" %>
+    <%= link_to "Return to all Garden",  pages_path, class:"cutlink" %>
   </div>
 </div>
